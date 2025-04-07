@@ -7,9 +7,6 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Copy default nginx config (optional)
-COPY nginx.conf /etc/nginx/nginx.conf
-
 # Create a directory for your Python app
 WORKDIR /app
 COPY . /app
